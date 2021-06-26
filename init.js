@@ -6,14 +6,12 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-// initialize the facebook sdk
 window.fbAsyncInit = function () {
     FB.init({
         appId: '254490923082025',
-        cookie: true,  // enable cookies to allow the server to access 
-        // the session
-        xfbml: true,  // parse social plugins on this page
-        version: 'v3.1' // The Graph API version to use for the call
+        cookie: true,
+        xfbml: true,
+        version: 'v10.0'
     });
 
 }

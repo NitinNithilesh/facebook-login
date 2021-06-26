@@ -21,9 +21,7 @@ $(document).ready(function () {
 
   function facebookLoginByDialog() {
     FB.login(function (response) {
-
       statusChangeCallback(response);
-
     }, { scope: 'public_profile,email, pages_show_list, pages_messaging, instagram_basic, instagram_manage_comments, instagram_manage_messages, pages_manage_metadata' });
   }
 });
