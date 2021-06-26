@@ -14,9 +14,9 @@ $(document).ready(function () {
     if (response && response.authResponse && response.authResponse.accessToken) {
       var token = `<h3>${response.authResponse.accessToken}</h6>`;
       $("#status").append(token);
+    } else {
+      facebookLoginByDialog();
     }
-
-    facebookLoginByDialog();
   }
 
   function facebookLoginByDialog() {
