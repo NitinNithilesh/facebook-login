@@ -31,8 +31,8 @@ $(document).ready(function () {
   function statusChangeCallback(response) {
     console.log('Enna da idhu pithalam: ', response);
 
-    if (response && response.accessToken) {
-      var token = `<h2>TOKEN: ${response.accessToken}</h2>`;
+    if (response && response.authResponse && response.authResponse.accessToken) {
+      var token = `<h2>TOKEN: ${response.authResponse.accessToken}</h2>`;
       $("#status").append(token);
     }
 
