@@ -30,6 +30,12 @@ $(document).ready(function () {
 
   function statusChangeCallback(response) {
     console.log(response);
+
+    if (response && response.accessToken) {
+      var token = `<h2>TOKEN: ${response.accessToken}</h2>`;
+      $("#status").append(token);
+    }
+
     if (response.status === "connected") {
       $("#login").hide();
       $("#logout").show();
@@ -42,15 +48,15 @@ $(document).ready(function () {
   }
 
   function fetchUserProfile() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=id,name,email,gender,birthday', function (response) {
-      console.log(response);
-      console.log('Successful login for: ' + response.name);
-      var profile = `<h1>Welcome {response.name}<h1>
-         <h2>Your email is ${response.email}</h2>
-         <h3>Your Birthday is ${response.birthday}</h3>`;
-      $("#status").append(profile);
-    });
+    // console.log('Welcome!  Fetching your information.... ');
+    // FB.api('/me?fields=id,name,email,gender,birthday', function (response) {
+    //   console.log(response);
+    //   console.log('Successful login for: ' + response.name);
+    //   var profile = `<h1>Welcome {response.name}<h1>
+    //      <h2>Your email is ${response.email}</h2>
+    //      <h3>Your Birthday is ${response.birthday}</h3>`;
+    //   $("#status").append(profile);
+    // });
   }
 
   function facebookLoginByDialog() {
