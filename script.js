@@ -11,14 +11,14 @@ $(document).ready(function () {
 
   // add event listener on the logout button
 
-  $("#logout").click(function () {
+  // $("#logout").click(function () {
 
-    $("#logout").hide();
-    $("#login").show();
-    $("#status").empty();
-    facebookLogout();
+  //   $("#logout").hide();
+  //   $("#login").show();
+  //   $("#status").empty();
+  //   facebookLogout();
 
-  });
+  // });
 
 
   function facebookLogin() {
@@ -32,7 +32,7 @@ $(document).ready(function () {
     console.log('Enna da idhu pithalam: ', response);
 
     if (response && response.authResponse && response.authResponse.accessToken) {
-      var token = `<h2>TOKEN: ${response.authResponse.accessToken}</h2>`;
+      var token = `<h6>TOKEN: ${response.authResponse.accessToken}</h6>`;
       $("#status").append(token);
     }
 
@@ -68,12 +68,9 @@ $(document).ready(function () {
   }
 
   // logging out the user from Facebook
-
-  function facebookLogout() {
-    FB.logout(function (response) {
-      statusChangeCallback(response);
-    });
-  }
-
-
+  // function facebookLogout() {
+  //   FB.logout(function (response) {
+  //     statusChangeCallback(response);
+  //   });
+  // }
 });

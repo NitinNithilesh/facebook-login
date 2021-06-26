@@ -7,7 +7,6 @@
 }(document, 'script', 'facebook-jssdk'));
 
 // initialize the facebook sdk
-
 window.fbAsyncInit = function () {
     FB.init({
         appId: '254490923082025',
